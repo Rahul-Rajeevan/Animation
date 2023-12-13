@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Interactive Elements Examples</title>
+  <style>
+    /* Add your styles here if needed */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+input, label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="date"], input[type="range"] {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Example 1: Submit Button -->
+  <input type="submit" value="Submit" class="submit-button">
+
+  <!-- Example 2: Reset Button -->
+  <input type="reset" value="Reset" class="reset-button">
+
+  <!-- Example 3: Text Input -->
+  <input type="text" placeholder="Type something" class="text-input">
+
+  <!-- Example 4: Password Input -->
+  <input type="password" placeholder="Enter password" class="password-input">
+
+  <!-- Example 5: Checkbox -->
+  <label>
+    <input type="checkbox" class="checkbox"> Check me
+  </label>
+
+  <!-- Example 6: Radio Button -->
+  <label>
+    <input type="radio" name="gender" class="radio-button"> Male
+  </label>
+  <label>
+    <input type="radio" name="gender" class="radio-button"> Female
+  </label>
+
+  <!-- Example 7: Number Input -->
+  <input type="number" placeholder="Enter a number" class="number-input">
+
+  <!-- Example 8: Email Input -->
+  <input type="email" placeholder="Enter your email" class="email-input">
+
+  <!-- Example 9: Date Input -->
+  <input type="date" class="date-input">
+
+  <!-- Example 10: Range Input -->
+  <input type="range" min="0" max="100" value="50" class="range-input">
+
+</body>
+</html>

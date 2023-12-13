@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Visibility</title>
+    <style>
+        body {
+            height: 200vh; /* Make the body taller than the viewport for scrolling */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #hiddenText {
+            opacity: 1;
+            transition: opacity 0.5s;
+            position: fixed;
+            top: 400px;
+            left: 200px;
+            padding: 10px;
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="hiddenText"></div>
+    
+    <!-- Add your content here -->
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hiddenText = document.getElementById('hiddenText');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 10) { // Adjust the scroll threshold as needed
+                    hiddenText.style.opacity=0;
+                } 
+                else {
+                    hiddenText.style.opacity=1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

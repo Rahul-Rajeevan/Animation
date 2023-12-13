@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tri {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid blue;
+}
+.pent {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid green;
+  border-bottom: 20px solid green;
+}
+.star {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid blue;
+  position: relative;
+}
+
+.star::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 40px solid blue;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid purple;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="tri"></div>
+    <br><br><br><br>
+    <div class="pent"></div>
+    <div class="star"></div>
+    <div class="arrow"></div>
+</body>
+</html>

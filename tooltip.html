@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #box {
+      margin-top: 200px;
+    }
+    .user {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .u1, .u2 {
+      position: relative; /* Add this to make sure the tooltip is positioned relative to these elements */
+    }
+    .u1:hover::before, .u2:hover::before {
+      display: block;
+      position: absolute;
+      top: -40px; /* Adjusted value */
+      left: 50%; /* Center the tooltip above the text */
+      transform: translate(0px,-30px); /* Center the tooltip above the text */
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      font-weight: bolder;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1;
+      background-position: center;
+      background-size: cover;
+    }
+    .u1:hover::before{
+      content: "";
+      background-image: url('https://sm.ign.com/t/ign_in/cover/g/gerard-but/gerard-butler_7sqz.300.jpg'); /* Set the path to your image */
+    }
+    .u2:hover::before{
+      content: "User2";
+      background-image: url('https://th-thumbnailer.cdn-si-edu.com/Hea0jP1IBwTPrG6PfKU6iZOgl5I=/800x800/filters:focal(4381x2523:4382x2524)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/e0/58/e058c2c2-b1d9-491c-abf5-973844b211a0/gettyimages-171399380.jpg'); /* Set the path to your image */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Hey its <span title="Month of Christmas">December</span></p>
+    <div id="box">
+      <p class="user">Hey its <span class="u1">Andrew</span></p>
+    </div>
+    <div>
+      <p class="user">Hey we are in a meeting and its <span class="u2">Ram</span></p>
+    </div>
+
+    <div>
+        <p class="user">Hey we aresdf sdfsdf sds gd  sd sd sgd  in a meeting and its <span class="u2">Ram</span></p>
+      </div>
+  </div>
+</body>
+</html>
