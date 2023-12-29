@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Corners</title>
+    <style>
+        .corner-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .corner-container::before,
+        .corner-container::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        .corner-container::before {
+            top: 0;
+            left: 0;
+            border-top-left-radius: 15px;
+        }
+
+        .corner-container::after {
+            bottom: 0;
+            right: 0;
+            border-bottom-right-radius: 15px;
+        }
+
+        /* Optional: Centered content */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="corner-container">
+        <!-- Optional: Add your content inside the container -->
+        <div class="content">Your Content Goes Here</div>
+    </div>
+</body>
+</html>

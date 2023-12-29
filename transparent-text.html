@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        @keyframes big{
+            100%{
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        #box{
+            width: 50%;
+            height: 70vh;
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            box-shadow: 3px 3px #ffcc00, -1em 0 .4em #ff6699, 1em 0 4em #ff6699, -1em 0 4em #ff6699;
+            border-radius: 10px; 
+            animation: big 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
